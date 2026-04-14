@@ -161,6 +161,22 @@ h1 {
   text-transform: uppercase;
 }
 
+/* CUSTOM CURSOR */
+.cursor {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.35);
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out, opacity 0.2s;
+}
+html, body { cursor: none; }
+a, button, .btn { cursor: none; }
+
 @media (max-width: 420px) {
   h1 { font-size: 32px; }
   body { padding: 1.5rem; }
@@ -211,5 +227,16 @@ h1 {
 
 
 </div>
+
+<div class="cursor" id="cursor"></div>
+<script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+  document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
+  document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; });
+</script>
 </body>
 </html>
