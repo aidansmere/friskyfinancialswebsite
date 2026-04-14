@@ -1,9 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <defs>
-    <radialGradient id="g" cx="40%" cy="35%">
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#E2C47A"/>
       <stop offset="100%" stop-color="#A07830"/>
-    </radialGradient>
+    </linearGradient>
   </defs>
-  <circle cx="16" cy="16" r="5" fill="url(#g)"/>
+  <!-- audio waveform bars -->
+  <rect x="5" y="13" width="2.5" height="6" rx="1.25" fill="#C9A84C"/>
+  <rect x="9" y="10" width="2.5" height="12" rx="1.25" fill="#C9A84C"/>
+  <rect x="13" y="7" width="2.5" height="18" rx="1.25" fill="#E2C47A"/>
+  <rect x="17" y="10.5" width="2.5" height="11" rx="1.25" fill="#C9A84C"/>
+  <rect x="21" y="8" width="2.5" height="16" rx="1.25" fill="#E2C47A"/>
+  <rect x="25" y="12" width="2.5" height="8" rx="1.25" fill="#C9A84C"/>
 </svg>
